@@ -1,0 +1,54 @@
+body {
+	margin: 0;
+	box-sizing: border-box;
+	font-family: 'Nunito';
+	background-color: #dee3f1;
+}
+
+.container {
+	height: 100vh;
+}
+
+.accordion {
+	width: 640px;
+	margin: 5em auto 0;
+	overflow: hidden;
+
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-bottom: .5em;
+		padding: 1em;
+		background-color: white;
+		color: #363636;
+		box-shadow: 10px 1px 10px 0px rgba($color: #000000, $alpha: .05);
+		cursor: pointer;
+	}
+
+	&__plus-icon {
+		font-size: .75em;
+	}
+
+	&__body {
+		background-color: white;
+		color: #5a5a5a;
+		overflow: hidden;
+
+		p {
+			margin: 0;
+			padding: 1.5em 1em;
+		}
+	}
+}
+
+.is-inactive {
+	max-height: 0;
+	transition: max-height .8s, margin .5s .8s;
+}
+
+.is-active {
+	max-height: 200px;
+	margin: .5em 0;
+	transition: max-height .8s .8s linear, margin .5s .8s;
+}
